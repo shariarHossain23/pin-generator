@@ -39,6 +39,7 @@ document.getElementById("submit-btn").addEventListener("click",function(){
     const calcInput= document.getElementById("calc-display").value;
     const successMessage = document.getElementById("done")
     const errorMessage = document.getElementById("wrong-text")
+    
     if(calcInput == ""){
         alert("dont match ")
     }
@@ -49,13 +50,19 @@ document.getElementById("submit-btn").addEventListener("click",function(){
     else{
         errorMessage.style.display = "block"
         successMessage.style.display = "none"
-    }
-
+        const text = document.getElementById('text')
         const actionLeft = document.getElementById("action-left");
         const action = actionLeft.innerText;
-       if(action > 0){
-        actionLeft.innerText = action -1;
-       }
+        if(action >= 1){
+            actionLeft.innerText = action -1;
+           }
+           else if(action == 0){
+             text.innerText = "try again"
+           }
+    }
+
+       
+       
     document.getElementById("show-pin").value = "";
     document.getElementById("calc-display").value = "";
 })
