@@ -50,6 +50,16 @@ document.getElementById("submit-btn").addEventListener("click",function(){
         errorMessage.style.display = "block"
         successMessage.style.display = "none"
     }
+
+        const actionLeft = document.getElementById("action-left");
+        const action = actionLeft.innerText;
+       if(action > 0){
+        actionLeft.innerText = action -1;
+       }
     document.getElementById("show-pin").value = "";
     document.getElementById("calc-display").value = "";
 })
+
+
+
+
